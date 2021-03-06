@@ -1,0 +1,21 @@
+@layout('layouts/app')
+
+@section('title')
+  Learning Edge Template
+@endsection
+
+@section('contents')
+  <h1>Learning Edge</h1>
+
+  @each(user in users)
+    <div style="border: 1px solid black; padding: 15px; background: grey;">
+      <h2>Name {{user.name}}</h2>
+      <h4>Page : {{user.page}}</h4>
+    </div>
+  @else
+    <div style="border: 1px solid black; padding: 15px; background: grey;">
+      <h2>Sorry no user in the database</h2>
+    </div>
+  @endeach
+
+@endsection
